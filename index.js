@@ -66,13 +66,9 @@ const cards_map = {
     52: { color:"Club", name:"Two", value:"2" },
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 const dHit = document.getElementById("hit");
 const dHand = document.getElementById("hand");
-const svgDir = "http://127.0.0.1/img/cards/"
+const svgDir = "./cards/"
 const paper = document.getElementById("paper");
 const end = document.getElementById("end");
 const dWin = document.getElementById("win");
