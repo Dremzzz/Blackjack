@@ -1,0 +1,141 @@
+body {
+    background-image: url("https://t3.ftcdn.net/jpg/03/25/38/64/240_F_325386410_7XLHgFBmPH10k0GCUXbikWCAeFFC8145.jpg");
+    background-size: 100% 100%;
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+#newGame {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#paper {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    color: black;
+    font-size: 2em;
+    height: 20%;
+    width: 20%;
+    top: 90%;
+    left: 97%;
+    transform: translate(-97%, -90%);
+    background-color: wheat;
+    border-radius: 10px;
+}
+
+@keyframes cardMove {
+    from {
+        margin-bottom: 2000px;
+    }
+    to {
+        margin-bottom: 0%;
+    }
+}
+
+#end {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    top: 50%;
+    left: 10%;
+    -webkit-transform: translate(-20%, -60%);
+    transform: translate(-20%, -60%);
+    border-radius: 100%;
+}
+
+#win {
+    position: absolute;
+    display: grid;
+    cursor: pointer;
+    place-items: center;
+    text-align: center;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.575);
+    top: 50%;
+    transform: translate(0%, -50%);
+    color: white;
+    font-size: 2em;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.card {
+    position: relative;
+    display: grid;
+    background-size: 250px 350px;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 20px;
+    margin-right: -200px;
+    float: left;
+    
+    animation-name: cardMove;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+#hand {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: end;
+    height: 100%;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0);
+    top: 90%;
+    left: 40%;
+    transform: translate(-50%, -100%);
+    overflow: visible;
+}
+
+.hitIn {
+    position: absolute;
+    color: white;
+    display: grid;
+    place-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.39);
+    font-size: 2em;
+}
+
+#hit {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    top: 80%;
+    left: 10%;
+    -webkit-transform: translate(-20%, -60%);
+    transform: translate(-20%, -60%);
+    border-radius: 100%;
+}
+
+.no-events {
+    pointer-events: none;
+}
