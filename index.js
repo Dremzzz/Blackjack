@@ -78,13 +78,13 @@ let usedCards = new Array();
 let yourHand = 0;
 
 const createCard = () => {
-    let card = document.createElement("div");
-    card.classList.add("card");
     let rCard = rando(1, 52);
     
     if (usedCards.indexOf(rCard) != -1) {
         createCard();
     } else {
+        let card = document.createElement("div");
+        card.classList.add("card");
         card.style.backgroundImage = `url(${svgDir}${cards_map[rCard].name}${cards_map[rCard].color}.svg)`
         usedCards.push(rCard);
         yourHand += parseInt(cards_map[rCard].value);
