@@ -113,11 +113,11 @@ end.addEventListener("click", () => {
     if (dealerHand > yourHand && dealerHand <= 21) {
         win = `Dealer wins with ${dealerHand} in his hand!<br><br>Click to start new game!`;
     } else if (dealerHand == yourHand && dealerHand <= 21) {
-        win = `You draw this game with ${yourHand} in your hand!<br>Dealer's hand: ${dealerHand}<br><br>Click to start new game!`;
+        win = `You draw this game with ${yourHand} in your hand!<br>Dealer's hand: ${dealerHand}<br><br>Click to start a new game!`;
     } else if (yourHand > 21) {
-        win = `You lose with ${yourHand} in your hand!<br>Dealer's hand: ${dealerHand}<br><br>Click to start new game!`;
+        win = `You lose with ${yourHand} in your hand!<br>Dealer's hand: ${dealerHand}<br><br>Click to start a new game!`;
     } else {
-        win = `You win with ${yourHand} in your hand!<br>Dealer's hand: ${dealerHand}<br><br>Click to start new game!`;
+        win = `You win with ${yourHand} in your hand!<br>Dealer's hand: ${dealerHand}<br><br>Click to start a new game!`;
     }
     
     dWin.innerHTML = win;
